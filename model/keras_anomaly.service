@@ -1,0 +1,14 @@
+[Unit]
+Description=Keras Anomaly Detection Master
+
+[Service]
+User=root
+Restart=always
+Type=simple
+ExecStart=/usr/bin/python3 /opt/model/keras_anomaly/api_bert.py
+
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
